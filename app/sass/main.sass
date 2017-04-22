@@ -21,76 +21,105 @@ $output-bourbon-deprecation-warnings: false !default
     padding-top: 25%
     h1
       margin-bottom: 50px
+    .button
+      margin-top: 60px
 
-.s-about
-  &-item
-    img
-      width: 150px
-      margin-bottom: 20px
+
+.s-problem
+  .problems
+    ul
+      display: block
+      list-style-type: none
+      li
+        text-align: left
+        padding: 12px 30px
+        border: 5px solid $blue
+        border-radius: 7px
+        margin-bottom: 10px
+        box-shadow: 0 5px 10px rgba($blue, .4)
+        p
+          font-family: "Open Sans SemiBold", sans-serif
+          font-weight: bold
+          font-size: em(18px)
+  .bottom-text
+    margin-top: 50px
+    h3
+      font-size: em(40px)
+      font-family: "Uni Sans", sans-serif
+      font-weight: bold
+      margin-bottom: 35px
+      text-shadow: 0 5px 10px rgba($color, .4)
+    p
+      font-size: em(18px)
+      font-family: "Open Sans SemiBold", sans-serif
+      font-weight: 400
+    .button
+      margin-top: 30px
+      color: $color
+      &:hover
+        color: $white
+
 
 .s-features
-  color: $white
-  img
-    width: 150px
-    margin-bottom: 20px
+  color: #fff
+  .bottom-text
+    margin-top: 40px
+.feat-item
+  .image
+    margin-bottom: 35px
+    .responsive-img
+      height: 200px
 
-.s-works
-  .col-md-3
-    padding: 5px 5px
-  .slide
-    position: relative
-    overflow: hidden
-    display: block
-    a
+.s-author
+  .sect-header
+    margin-bottom: 60px
+    h2
+      margin-bottom: 40px
+    h3
+      font-size: em(36px)
+      font-family: "Open Sans SemiBold", sans-serif
+      font-weight: bold
+      text-shadow: 0 5px 10px rgba($color, .4)
+  .about-author
+    margin-top: 70px
+    h5
+      font-size: em(20px)
+    ul
+      margin-bottom: 40px
+      padding-left: 20px
       display: block
-    &:hover
-      .slide-content
-        opacity: 1
-        transform: scale(.95)
-    img
-      +mt(.5s)
-    &-content
-      position: absolute
-      color: darken($color, 10%)
-      padding-top: 10%
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      opacity: 0
-      background-color: rgba($white, .65)
-      text-align: center
-      +mt(.5s)
-      transform: scale(1.1)
-      .fa
-        color: darken($color, 10%)
-        font-size: 40px
-        padding: 20px 20px 5px
-  h3
-    text-transform: none
-    font-size: em(20px)
+      li
+        text-align: left
+        font-size: em(18px)
+        line-height: 1.9
 
-.slide-popup
-  position: relative
-  background-color: #fff
-  max-width: 900px
-  margin: auto
-  text-align: center
-  display: block
-  +mt(.25s)
-  .col-sm-12
-    padding: 0
+
+.s-partners
+  background-color: $gray
+.partners-item
+  padding: 10px
+  box-sizing: border-box
+  border: 2px solid transparent
+  border-radius: 5px
+  +mt(.5s)
+  img
+    +mt(.5s)
+  &:hover
+    border: 2px solid $blue
+    img
+      transform: scale(1.1)
+    h4
+      color: $blue !important
 
 
 .s-contacts
-  background-color: lighten($color, 20%)
-  color: $white
+  color: $color
   padding-top: 60px
 
 .form
   display: block
   padding: 20px 30px
-  border: 1px solid rgba($accent, 20%)
+  border: 1px solid rgba($blue, 20%)
   border-radius: 8px
   margin-bottom: 50px
   &-head
@@ -110,7 +139,7 @@ $output-bourbon-deprecation-warnings: false !default
       outline: none
       background-color: transparent
       color: $white
-      border: 1px solid rgba($accent, 20%)
+      border: 1px solid rgba($blue, 20%)
       border-radius: 5px
       margin-bottom: 20px
       padding: 10px 16px
@@ -137,7 +166,7 @@ $output-bourbon-deprecation-warnings: false !default
       color: rgba($white, .7) !important
       .img-svg
         path
-          fill: $accent !important
+          fill: $blue !important
 
 .form.form-callback
   background-color: rgba($white, .1)

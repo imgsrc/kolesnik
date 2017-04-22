@@ -14,29 +14,23 @@ $(function () {
     } else {
     }
 
-    //parallax
+    /*
+      Smooth scroll
+    *********************
+     */
+    $("#about").on("click", function (e) {
+      e.preventDefault();
+      $("html, body").animate({
+        scrollTop: $("#problem").offset().top
+      }, 500);
+    });
+
+  //parallax
     $(".s-features").parallax({
         imageSrc: './img/bg2.jpg'
     });
 
-    //EqualHeight
-    $(".item-text").equalHeights();
-
-    //Magnific Popup
-    var slide = $('.slide');
-    slide.each(function (e) {
-        var th = $(this);
-        th.attr('href', '#slide-' + e)
-            .find('.slide-popup')
-            .attr('id', 'slide-' + e);
-    });
-    slide.magnificPopup({
-        mainClass: 'my-mfp-zoom-in',
-        removalDelay: 300,
-        type: 'inline'
-    });
-
-    var callBack = $('a[href="#callback"]');
+  var callBack = $('a[href="#callback"]');
     callBack.magnificPopup({
         mainClass: 'my-mfp-zoom-in',
         removalDelay: 300,

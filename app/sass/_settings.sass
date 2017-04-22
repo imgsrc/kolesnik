@@ -1,6 +1,7 @@
 $output-bourbon-deprecation-warnings: false !default
 @import ../../bourbon/bourbon
 @import vars
+@import ../libs/media
 
 *::-webkit-input-placeholder
   color: rgba($white, .4)
@@ -41,21 +42,17 @@ body
   font-family: $default-font
   overflow-x: hidden
 
-p
-  font-size: 16px
-
 section
   padding: em(60px) 0
   h2
     margin-top: 0
-    margin-bottom: em(60px)
+    margin-bottom: em(40px)
 
 hr
   margin: 0
   border-top: 1px solid lighten($color, 50% )
 
 .responsive-img
-  display: block
   max-width: 100%
   height: auto
 
@@ -65,37 +62,36 @@ h1, h2, h3, h4, h5, h6
 
 h1
   font-family: "Open Sans Light", sans-serif
-  font-size: em(48px)
+  font-size: em(52px)
   line-height: 1.2
 
 
 h2
   font-family: "Open Sans Light", sans-serif
-  font-size: em(36px)
+  font-size: em(40px)
 
 h3, h4
   font-family: "Open Sans SemiBold", sans-serif
   text-transform: uppercase
 
 h3
-  font-size: em(21px)
+  font-size: em(24px)
 
 h4
-  font-size: em(16px)
+  font-size: em(18px)
 
 a
   text-decoration: underline
-  color: $accent
+  color: $blue
   outline: none !important
   &:hover
     text-decoration: none
 
 b, strong
   font-family: "Open SansSemi Bold", sans-serif
-  font-weight: normal
 
 .fa
-  color: lighten($accent, 15%)
+  color: lighten($blue, 15%)
 
 +media-xs(down)
   html, body
@@ -103,49 +99,21 @@ b, strong
 
 .button
   display: inline-block
-  border: none
-  background-color: $accent
+  border: 3px solid lighten($blue, 10%)
+  background-color: transparent
   text-align: center
-  color: #fff
+  color: $white
   font-size: em(14px)
   text-decoration: none
   letter-spacing: 2px
   text-transform: uppercase
   padding: 13px 34px
-  border-radius: 3px
+  border-radius: 5px
   +mt(0.15s)
-  &:hover, &:focus
+  &:hover, &:focus, &:active
     color: #fff
     text-decoration: none
-  &:hover
-    background-color: lighten($accent, 10%)
-  &:active
-    background-color: darken($accent, 10%)
-    transform: translateY(2px)
-
-.button-accent
-  background-color: transparent
-  border: 1px solid $accent
-  box-shadow: 0 4px 0 darken($accent, 6%)
-  color: $accent
-  font-family: "Open SansSemi Bold", sans-serif
-  &:hover
-    background-color: $accent
-  &:active, &:focus
-    background-color: darken($accent, 6%)
-
-.button-small
-  padding: 9px 28px
-  font-size: em(13px)
-  background-color: $accent
-  &:hover
-    background-color: lighten($accent, 8%)
-  &:active, &:focus
-    background-color: darken($accent, 6%)
-
-.button-gray
-  background-color: #e8e8e8
-  color: #666
+    background-color: darken($blue, 10%)
 
 //Размытие при всплывающем окне
 *
